@@ -1,1 +1,63 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Input</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Number Input</h1>
+    <input id="numberInput" type="text" placeholder="Enter a number">
+    <p id="output"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+<<<<<<<<----------------------------------------------->>>>>>
+
+
+
+.container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-weight: bold;
+  }
+  
+  
+<<<<<<<<----------------------------------------------->>>>>>
+
+const numberInput = document.getElementById('numberInput');
+const output = document.getElementById('output');
+
+numberInput.addEventListener('input', function() {
+  const value = parseInt(numberInput.value);
+
+  
+
+  if (value < 0) {
+    output.textContent = 'Enter a positive value';
+  } else if (value % 2 === 0) {
+    output.textContent = ` ${value + 2}, ${value + 4}, ${value + 6}`;
+  } else {
+    output.textContent = `${value + 2}, ${value + 4}, ${value + 6}`;
+  }
+});
